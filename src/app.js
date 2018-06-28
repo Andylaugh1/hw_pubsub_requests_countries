@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const country = new Country();
   country.getData();
+  country.handleSelection();
 
   const selectElement = document.querySelector('select#countries');
   const countryDropdown = new CountrySelectView(selectElement);

@@ -9,6 +9,8 @@ Country.prototype.handleSelection = function () {
   PubSub.subscribe('SelectView:change', (event) => {
     const selectedCountry = event.detail;
     PubSub.publish('Country:selected-country-ready', selectedCountry)
+    console.log(selectedCountry);
+
   });
 };
 

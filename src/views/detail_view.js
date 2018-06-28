@@ -8,7 +8,7 @@ DetailView.prototype.bindEvents = function () {
   PubSub.subscribe('Country:selected-country-ready', (event) => {
     selectedCountry = event.detail;
     console.log(selectedCountry);
-    this.render(countryData);
+    this.render(selectedCountry);
   })
 }
 
@@ -20,7 +20,6 @@ DetailView.prototype.render = function (countryData) {
 
   const countryRegion = this.createElement('h2', country.region);
   this.container.appendChild(countryRegion);
-
 }
 
 DetailView.prototype.createElement = function (elementType, text) {
